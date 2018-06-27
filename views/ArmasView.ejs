@@ -1,0 +1,26 @@
+<%- include _header %>
+<h3>Bodega de armas</h3>
+<div>
+<ul class="collection">
+<% armas.forEach((arma) => {%>
+    <div style="margin-left:7%; margin-right: 6%;">
+                <li class="collection-item avatar">
+                  <img src="recursos/gun.png" alt="" class="circle">
+                  <span class="title"> <%= arma.name %></span>
+                  <p> 
+                      <% if (arma.municion){%>
+                        Cargado 
+                        <% }else{ %>
+                        No cargada
+                        <% }%>
+                <br>
+                <%= arma.descripcion %>
+                  </p>
+                  
+                  <a href="/arma/<%=arma.name %>" class="secondary-content"><i class="material-icons">Mas información</i></a>
+                </li>
+   
+    </div>
+    <% }) %>
+</div>
+<%- include _footer %>

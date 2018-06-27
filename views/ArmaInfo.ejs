@@ -1,0 +1,21 @@
+<%- include _header %>
+
+    <div class="row margin-left:5%;" style="margin-left: 2%; margin-bottom: 0%">
+       
+
+                <h3>
+                    <%= armas.name %> ~</h3><hr>    
+                <h4>Se caracteriza por: <br>"
+                    <%= armas.descripcion %> ".<br> <hr>Tiene una fuerza de
+                        <%= armas.fuerza %>. <br><hr>Entra en la categoria de:
+                            <%= armas.categoria %>
+                </h4><hr>
+                <%if (armas.municion === true){%>
+                    <h4>Esta cargada </h4>
+                    <% } %>
+
+            </div>
+        </div>
+    </div>
+
+    <%- include _footer %>

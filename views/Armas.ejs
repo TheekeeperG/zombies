@@ -1,0 +1,28 @@
+<%- include _header %>
+
+    <h1>Bodega de armas</h1>
+
+    <form action="/Armas" method="post">
+        <div class="input-field col s12">
+            <div class="row">
+                <input type="text" name="name" placeholder="Nombre del arma" required autofocus/>
+                <div>
+                    <input type="text" name="descripcion" placeholder="Descripcion del arma" required/>
+                </div>
+                <div>
+                    <input type="number" name="fuerza" placeholder="Fuerza del arma" required/>
+                </div>
+                <div>
+                    <input type="text" name="categoria" placeholder="Categoria" required/>
+                </div>
+                <div>
+                        <label>
+                                <input type="checkbox" checked="checked" name="municion" />
+                                <span>¿Tiene munición?</span>
+                              </label>
+                </div>
+                <input type="submit" value="Agregar arma" />
+            </div>
+    </form>
+
+    <%- include _footer %>

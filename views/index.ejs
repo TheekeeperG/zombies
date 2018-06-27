@@ -1,0 +1,17 @@
+<%- include _header %>
+<h1>Bienvenid@s a la guarida zombie!</h1>
+
+<% zombies.forEach((zombie) => {%>
+    <div>
+        <a href="/zombie/<%=zombie.username %>">
+            <%= zombie.username %>
+        </a>
+    
+    <% if(zombie.bio) { %>
+    <div>
+        <%= zombie.bio %></div>
+        <% } %>
+    </div>
+    <% }) %>
+
+<%- include _footer %>
